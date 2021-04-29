@@ -20,7 +20,7 @@ async function getProductoML (name){
 
 }
 */
-
+//Prueba
 function getProducto(name){
     let productName = url + name
     fetch(productName)
@@ -32,7 +32,8 @@ function getProducto(name){
                 const myPara1 = document.createElement('p')
                 myPara1.textContent= `${json.results[i].title}`
                 const myPara2 = document.createElement('p')
-                myPara2.textContent=`${json.results[i].price}`
+                myPara2.textContent=`$ ${json.results[i].price}`
+                
                 let imagen = document.createElement('img')
                 imagen.setAttribute('src',json.results[i].thumbnail)
                 imagen.className += "imagen"
@@ -54,4 +55,5 @@ function getProducto(name){
 
 }
 
-getProducto("computadora")
+//getProducto("computadora")
+getProducto("iphone")

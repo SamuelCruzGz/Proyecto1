@@ -2,10 +2,14 @@ const url = "https:/api.mercadolibre.com/sites/MLM/search?q="
 let textML = document.getElementById("MercadoLibre");
 var button = document.getElementById("buttonSearch");
 
-button.addEventListener("click", () => {
-    const input = document.getElementById("search").value;        
-    getProducto(input)
-})
+function buscar(){
+    button.addEventListener("click", () => {
+        const input = document.getElementById("search").value;        
+            
+    })
+    
+}
+
 
 /*async function getProduct (name){
     let productName = url + name
@@ -41,3 +45,4 @@ function getProducto(name){
 
 }
 
+getProducto(input)
