@@ -75,9 +75,14 @@ input{
 }
 .logo{
     image-rendering: optimizeQuality;
-    position: absolute;
+    position: relative;
     width: 20%;
     height: 10%;
-    right: 75%;
+    right: 59%;
     top: 1%;
+}
+
+.container {
+    background-color: #eee;
+    color: black;
 }

@@ -10,13 +10,14 @@ let contador = 0
 let carrito = {}
 
 /*document.addEventListener('DOMContentLoaded', () => {
-    fetch(namo);
+    fetch();
     if (localStorage.getItem('carrito')) {
         carrito = json.parse(localStorage.getItem('carrito'))
         pintarCarrito()
     }
 })*/
 //Obtener click del boton de carrito de compras
+
 textML.addEventListener('click', e => {
     addCarrito(e);
 })
