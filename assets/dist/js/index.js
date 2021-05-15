@@ -31,8 +31,8 @@ async function total(){
   
   for (let i = 0; i < data.results.length ; i++){    
     contenido.push(data.results[i].price)    
-
-    var pageCont = Math.ceil(contenido.length/pageSize)
+  }
+  var pageCont = Math.ceil(contenido.length/pageSize)
     
     function paginate(array, page_size, page_number) {
       return array.slice((page_number - 1) * page_size, page_number * page_size)
@@ -62,8 +62,6 @@ async function total(){
     showContent(contenido)
     
     
-  
-  }
   
 }
 
