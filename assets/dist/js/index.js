@@ -18,21 +18,24 @@ function buscar(){
     
     
 }
-let contenido = []
 
+let contenido = [total()]
 var pageNumber = 1
-var pageSize = 6
-
-var contenidoHTML=""
-var pagination    
+var pageSize = 1
+let contenidoHTML
 async function total(){
   let res = await fetch(url)
   let data = await res.json()
-  
   for (let i = 0; i < data.results.length ; i++){    
-    contenido.push(data.results[i].price)    
+   return contenido.push(data.results[i].price) 
   }
-  var pageCont = Math.ceil(contenido.length/pageSize)
+     
+}
+     
+     
+  console.log(contenido) 
+    let pagination
+    var pageCont = Math.ceil(contenido.length/pageSize)
     
     function paginate(array, page_size, page_number) {
       return array.slice((page_number - 1) * page_size, page_number * page_size)
@@ -41,6 +44,7 @@ async function total(){
       pageNumber++
       showContent(pagination)
     }
+        
     function previousPage() {
       pageNumber--
       showContent(pagination)
@@ -58,17 +62,9 @@ async function total(){
       contenidoHTML+= pageNumber < pageCont?("<button onclick='nextPage()'>Siguiente</button>"):""
       document.getElementById("MercadoLibre").innerHTML=""
       document.getElementById("MercadoLibre").innerHTML=contenidoHTML
+      
     }
-    showContent(contenido)
-    
-    
-  
-}
+showContent(contenido)    
 
-    
-    
-  
-    
 total()
-
 
