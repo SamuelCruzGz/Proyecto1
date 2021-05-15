@@ -27,7 +27,7 @@ async function total(){
   let res = await fetch(url)
   let data = await res.json()
   for (let i = 0; i < data.results.length ; i++){    
-   return contenido.push(data.results[i].price) 
+   contenido.push(data.results[i].price) 
   }
      
 }
